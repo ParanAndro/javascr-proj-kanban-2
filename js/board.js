@@ -22,6 +22,7 @@ $('.create-column')
 			}
 		});
 });
+
 	
 function initSortable() {
 	$('.card-list').sortable({

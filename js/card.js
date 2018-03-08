@@ -7,9 +7,9 @@ function Card(id, name) {
 	this.element = createCard();
 
 	function createCard() {
-		var card = $('<li>').addClass('card');
-		var cardDeleteBtn = $('<button>').addClass('btn-delete').text('x');
-		var cardDescription = $('<p>').addClass('card-description').text(self.description);
+		var card = $('<li class="card"></li>');
+		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
+		var cardDescription = $('<p class="card-description"></p>');
 		
 		cardDeleteBtn.click(function(){
 			self.removeCard();
@@ -18,7 +18,6 @@ function Card(id, name) {
 		card.append(cardDeleteBtn);
 		cardDescription.text(self.name);
 		card.append(cardDescription);
-		console.log(card);
 		return card;
 	}
 }
