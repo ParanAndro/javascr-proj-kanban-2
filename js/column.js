@@ -2,6 +2,7 @@ function Column(id, name) {
 	var self = this;
 	this.id = id;
 	this.name = name || 'No name given';
+	this.element = createColumn();
 
 
 	function createColumn() {
@@ -17,7 +18,7 @@ function Column(id, name) {
 			self.deleteColumn();
 		});
 		
-		$columnAddCard.click(function(event) {
+		columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
 			event.preventDefault();
 			$.ajax({
@@ -45,7 +46,7 @@ function Column(id, name) {
 
 Column.prototype = {
 	addCard: function(card) {
-	  this.element.children('ul').append(card.element);
+		this.element.children('ul').append(card.element);
 	},
 	deleteColumn: function() {
 		var self = this;

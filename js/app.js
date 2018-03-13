@@ -4,7 +4,6 @@ var myHeaders = {
 	'X-Client-Id': '2832',
 	'X-Auth-Token': 'afe242bb8b5dec05b8901906638fa839'
 };
-
 // METODA UMIESZCZAJĄCA NAGŁÓWKI W KAŻDYM ZAPYTANIU
 $.ajaxSetup({
 	headers: myHeaders
@@ -31,7 +30,7 @@ function setupColumns(columns) {
 function setupCards(col, cards) {
 	cards.forEach(function (card) {
 		var cardObj = new Card(card.id, card.name, card.bootcamp_kanban_column_id);
-		col.createCard(cardObj);
+		col.addCard(cardObj);
 	})
 }
 
